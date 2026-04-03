@@ -1,1 +1,38 @@
-<h1>Prova</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web a Pantalla Completa</title>
+    <style>
+        /* Quitamos márgenes y hacemos que el cuerpo ocupe todo */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Evita el scroll si no lo quieres */
+        }
+
+        /* Estilo para que la imagen cubra toda la pantalla */
+        .full-screen-img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; /* Esto hace que la foto rellene el espacio sin deformarse */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <picture>
+        <!-- Si la pantalla tiene menos de 768px (móvil), carga fotoB -->
+        <source media="(max-width: 767px)" srcset="fotoB.jpg">
+        
+        <!-- Para todo lo demás (PC, Tablet horizontal, Laptop), carga fotoA -->
+        <img src="fotoA.jpg" alt="Imagen de fondo" class="full-screen-img">
+    </picture>
+
+</body>
+</html>
+
