@@ -4,24 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Web a Pantalla Completa</title>
-    <style>
-        /* Quitamos márgenes y hacemos que el cuerpo ocupe todo */
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden; /* Evita el scroll si no lo quieres */
-        }
-
-        /* Estilo para que la imagen cubra toda la pantalla */
-        .full-screen-img {
-            width: 100vw;
-            height: 100vh;
-            object-fit: contain; /* Esto hace que la foto rellene el espacio sin deformarse */
-            display: block;
-        }
-    </style>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000; /* Fondo negro para los bordes */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+        
+            /* Contenedor con margen de seguridad */
+            picture {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                /* AQUÍ CONTROLAS EL MARGEN: 20px de separación en todos los lados */
+                padding: 20px; 
+                box-sizing: border-box;
+            }
+        
+            .full-screen-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Mantiene el efecto cover */
+                border-radius: 8px; /* Opcional: bordes redondeados para que quede más moderno */
+                display: block;
+            }
+        </style>
 </head>
 <body>
 
